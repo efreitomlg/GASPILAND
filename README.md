@@ -1,1 +1,7 @@
-# GASPILAND
+# Install
+
+`npm install`
+
+# Run
+
+`npm start`

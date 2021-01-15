@@ -1,0 +1,57 @@
+<!doctype>
+<html lang="fr">
+  <head>
+      <meta charset="utf-8">
+      <title>Qui sommes nous ?</title>
+      <!-- Load Vue followed by Vue Router -->
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/http-vue-loader/src/httpVueLoader.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="qui">
+      <div id="app">
+        <header>
+          <div>
+            <h1 class="logoqui">Qui sommes nous ?</h1>
+          </div>
+          <br><br><br><br><br><br><br>
+          <nav>
+            <div>
+              <ul class="nav-menu2-list">
+                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="https://www.efrei.fr/">Notre emplacement</a></li>
+              </ul>
+            </div>              
+          </nav>
+          <div class="quibord">
+            <p class="quitext">Chers utilisateurs,<br><br>Nous sommes un groupe d'étudiants ayant pour de mettre le numérique au sens large au service de la société.
+              Notre équipe d'élève de L3, composée de <mark class="surligner">Sofiane</mark>, <mark class="surligner">Tom</mark>, <mark class="surligner">Armel</mark> <mark class="surligner">Paul</mark> et<mark class="surligner"> Louis </mark>a décidée de transformer le <mark class="surligner">gaspillage alimentaire</mark> en partage. <br>C'est pourquoi nous vous proposons une plateforme
+              d'échange entre particuliers, donneurs et receveurs. Nous n'excluons personnes : aucune différence entre les classes car notre objectif premier est de réduire massivement les 
+              déchets alimentaires.
+            </p>
+          </div>
+          <div class="quibordbis">
+            <p class="quitext">
+              <mark class="surligner">Quelques chiffres clés :</mark><br><br> - On estime à <mark class="surligner">10 milliards</mark> de Kg la masse du gaspillage alimentaire par an en France. Cela englobe le gaspillage depuis la production jusqu'à la consommation du produit <br>
+              - Si on divise ce nombre par la population totale de France (environ 67 millions) on obtient environ <mark class="surligner">150 Kg</mark> de déchets par personnes.
+            </p>
+
+          </div>
+          <br><br><br><br><br>
+        </header>
+        <main>
+          <router-view
+            :articles="articles"
+            :panier="panier"
+            @add-article="addArticle"
+            @delete-article="deleteArticle"
+            @update-article="updateArticle"
+            @add-to-panier= "addToPanier"
+          ></router-view>
+        </main>
+      </div>
+      <script src="/vue-application.js"></script>
+  </body>
+</html>
